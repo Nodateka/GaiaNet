@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Название файла для Python скрипта
 PYTHON_SCRIPT_NAME="request_script.py"
 VENV_DIR="venv"
