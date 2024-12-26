@@ -1,8 +1,7 @@
 #!/bin/bash
 
-
 # Название файла для Python скрипта
-PYTHON_SCRIPT_NAME="request_script.py"
+PYTHON_SCRIPT_NAME="gaia_request.py"
 VENV_DIR="venv"
 
 # Проверка, запущен ли скрипт с правами суперпользователя
@@ -152,7 +151,7 @@ else
 fi
 
 # Запуск Python скрипта в фоновом режиме через screen
-screen -dmS python_script_session bash -c "source $VENV_DIR/bin/activate && python3 $PYTHON_SCRIPT_NAME | tee -a request_script.log"
+screen -dmS gaia_request bash -c "source $VENV_DIR/bin/activate && python3 $PYTHON_SCRIPT_NAME | tee -a request_script.log"
 
 echo "Скрипт $PYTHON_SCRIPT_NAME запущен в фоновом режиме через screen."
-echo "Чтобы подключиться к сессии screen и посмотреть логи, используйте команду: screen -r python_script_session"
+echo "Чтобы подключиться к сессии screen и посмотреть логи, используйте команду: screen -r gaia_request"
